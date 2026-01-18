@@ -3,10 +3,13 @@ export const Application = () => {
         <>
             <h1>Job application form</h1>
             <h2>Section 1</h2>
+            <span title="close">X</span>
+            <img src="https://placehold.co/600x400" alt="a person with laptop" />
+            <div data-testid="custom-element">Custom HTML element</div>
             <form>
                 <div>
                     <label htmlFor="name">Name</label>
-                    <input type="text" id="name" placeholder="fullName" />
+                    <input type="text" id="name" placeholder="fullName" value={'Quang Anh'} onChange={() => { }} />
                 </div>
                 <div>
                     <label htmlFor="bio">Bio</label>

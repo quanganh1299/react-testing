@@ -16,6 +16,15 @@ describe('Application', () => {
         })
         expect(sectionHeading).toBeInTheDocument()
 
+        const closeElement = screen.getByTitle('close')
+        expect(closeElement).toBeInTheDocument()
+
+        const imgElement = screen.getByAltText('a person with laptop')
+        expect(imgElement).toBeInTheDocument()
+
+        const customElement = screen.getByTestId('custom-element')
+        expect(customElement).toBeInTheDocument()
+
         const nameElement = screen.getByRole('textbox', {
             name: 'Name'
         })
@@ -26,6 +35,9 @@ describe('Application', () => {
 
         const nameElement3 = screen.getByPlaceholderText('fullName')
         expect(nameElement3).toBeInTheDocument()
+
+        const nameElement4 = screen.getByDisplayValue('Quang Anh')
+        expect(nameElement4).toBeInTheDocument()
 
         const bioElement = screen.getByRole('textbox', {
             name: 'Bio'
