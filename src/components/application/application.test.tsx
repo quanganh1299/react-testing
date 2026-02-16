@@ -16,6 +16,12 @@ describe('Application', () => {
         })
         expect(sectionHeading).toBeInTheDocument()
 
+        const paragraphElement = screen.getByText(/mandatary/i, { exact: false });
+        expect(paragraphElement).toBeInTheDocument()
+
+        const paragraphElement2 = screen.getByText((content) => content.includes('mandatary'));
+        expect(paragraphElement2).toBeInTheDocument()
+
         const closeElement = screen.getByTitle('close')
         expect(closeElement).toBeInTheDocument()
 

@@ -6,6 +6,7 @@ export const Application = () => {
             <span title="close">X</span>
             <img src="https://placehold.co/600x400" alt="a person with laptop" />
             <div data-testid="custom-element">Custom HTML element</div>
+            <div>All fields are mandatary</div>
             <form>
                 <div>
                     <label htmlFor="name">Name</label>
