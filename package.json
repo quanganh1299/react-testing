@@ -6,11 +6,11 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint --ignore-path .gitignore .",
+    "lint": "eslint --ignore-pattern .gitignore .",
     "preview": "vite preview",
     "test": "vitest",
     "coverage": "vitest run --coverage",
-    "format": "prettier --ignore-path .gitignore --write \"**/*.{ts,tsx,css,scss}\"",
+    "format": "prettier --ignore-pattern .gitignore --write \"**/*.{ts,tsx,css,scss}\"",
     "prepare": "husky install"
   },
   "eslintConfig": {
@@ -53,6 +53,10 @@
     "vite": "npm:rolldown-vite@7.2.5",
     "vitest": "^4.0.17",
     "husky": "^8.0.0"
+  },
+  "lint-staged": {
+    "*.{ts, tsx}": ["eslint"],
+    "*.{ts, tsx, css, scss}": ["prettier --write"]
   },
   "overrides": {
     "vite": "npm:rolldown-vite@7.2.5"
