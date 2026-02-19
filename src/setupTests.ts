@@ -1,18 +1,18 @@
-import '@testing-library/jest-dom';
-import { server } from './mocks/server';
+import '@testing-library/jest-dom'
+import { server } from './mocks/server'
 
 beforeAll(() => {
-    // Start the interception.
-    server.listen()
+  // Start the interception.
+  server.listen()
 })
 
 afterEach(() => {
-    // Remove any handlers you may have added
-    // in individual tests (runtime handlers).
-    server.resetHandlers()
+  // Remove any handlers you may have added
+  // in individual tests (runtime handlers).
+  server.resetHandlers()
 })
 
 afterAll(() => {
-    // Disable request interception and clean up.
-    server.close()
+  // Disable request interception and clean up.
+  server.close()
 })
